@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">FinanceTrackerApp</string>
+    <string name="app_name">FinanceTracker</string>
+    <string-array name="items">
+        <item>Select item</item>
+        <item>Transport</item>
+        <item>Food</item>
+        <item>House</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+        <item>Charity</item>
+        <item>Apparel</item>
+        <item>Health</item>
+        <item>Personal</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="items1">
+        <item>Select item</item>
+        <item>Salary</item>
+        <item>Business Profit</item>
+        <item>Rent</item>
+        <item>Other</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

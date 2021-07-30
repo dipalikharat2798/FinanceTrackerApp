@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
+    android:layout_height="200dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finance Tracker"
+        android:textAppearance="?android:textAppearanceMediumInverse"
+        android:textColor="@color/bg"
+        android:gravity="center"/>
+
+</LinearLayout>

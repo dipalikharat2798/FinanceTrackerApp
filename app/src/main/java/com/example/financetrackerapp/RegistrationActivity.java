@@ -17,51 +17,38 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
-    private EditText email, password ;
-    private TextView loginQn,loginBtn;
+public class RegistrationActivity extends AppCompatActivity {
+    private EditText email, password ,name, confpass;
+    private  TextView registerBtn ,registerLoginBtn;
+
     private FirebaseAuth mAuth;
     private ProgressDialog progressDialog;
-
-    private FirebaseAuth.AuthStateListener authStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registration);
 
-        authStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user  =mAuth.getCurrentUser();
-                if (user!=null){
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        };
-
-        email = findViewById(R.id.email_tv);
-        password = findViewById(R.id.password_tv);
-        loginBtn = findViewById(R.id.signin_btn);
-        loginQn = findViewById(R.id.signup_btn);
+        name=findViewById(R.id.reg_name_tv);
+        email = findViewById(R.id.reg_email_tv);
+        password = findViewById(R.id.reg_pass_tv);
+        confpass=findViewById(R.id.reg_confPass_tv);
+        registerBtn = findViewById(R.id.btn_SignUp);
+        registerLoginBtn=findViewById(R.id.btn_signin);
 
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
 
-
-        loginQn.setOnClickListener(new View.OnClickListener() {
+        registerLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                Intent intent = new Intent(RegistrationActivity.this,LoginActivity.class);
                 startActivity(intent);
             }
         });
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String emailString = email.getText().toString();
@@ -73,23 +60,22 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(passwordString)){
                     password.setError("Password is required");
                 }
-
                 else {
 
-                    progressDialog.setMessage("login in progress");
+                    progressDialog.setMessage("registration in progress");
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
 
-                    mAuth.signInWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    mAuth.createUserWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();
                             }else {
-                                Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegistrationActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                 progressDialog.dismiss();
                             }
                         }
@@ -97,18 +83,5 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        mAuth.addAuthStateListener(authStateListener);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mAuth.removeAuthStateListener(authStateListener);
     }
 }

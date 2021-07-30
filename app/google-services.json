@@ -1,0 +1,222 @@
+{
+  "project_info": {
+    "project_number": "647836743466",
+    "firebase_url": "https://mlprojects-9751e-default-rtdb.firebaseio.com",
+    "project_id": "mlprojects-9751e",
+    "storage_bucket": "mlprojects-9751e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:f66658169cf6a209d99053",
+        "android_client_info": {
+          "package_name": "com.example.facedetection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:bc93f03f62637905d99053",
+        "android_client_info": {
+          "package_name": "com.example.financetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:753dd841776e82d1d99053",
+        "android_client_info": {
+          "package_name": "com.example.financetrackerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:cd2ede6afeba33f1d99053",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauthsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-9674ppl77nuc9q44obndhm2l0uqs74or.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaseauthsocial",
+            "certificate_hash": "85173145068e2575c9013f6fe6a1b7e8cebbaaaa"
+          }
+        },
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:98175828df3c0e04d99053",
+        "android_client_info": {
+          "package_name": "com.example.sociallogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:3705882bfc3ee863d99053",
+        "android_client_info": {
+          "package_name": "com.example.socialproviders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647836743466:android:3ae377a40a3f05e4d99053",
+        "android_client_info": {
+          "package_name": "com.example.squawkapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeWhiCJDOs8PwurUBaXnmpJe83Fkl9_NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647836743466-vueosoc1is27bpil0rqvhra1qsvc3irp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
