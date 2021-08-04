@@ -16,6 +16,12 @@ public class Data {
         this.id = id;
         this.date = date;
     }
+    public Data(double amount, String type, String id, String date) {
+        this.amount = amount;
+        this.type = type;
+        this.id = id;
+        this.date = date;
+    }
 
     public double getAmount() {
         return amount;

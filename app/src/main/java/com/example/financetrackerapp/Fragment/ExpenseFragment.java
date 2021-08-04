@@ -42,7 +42,7 @@ public class ExpenseFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_id_expense);
         expenseSum = view.findViewById(R.id.expense_txt_result);
 
-        mexpenseDatabase = FirebaseDatabase.getInstance().getReference().child("ExpenseData").child(uid);
+        mexpenseDatabase = FirebaseDatabase.getInstance().getReference().child("ExpenseData").child(uid).child(uid);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         layoutManager.setReverseLayout(true);

@@ -30,15 +30,16 @@ public class IncomeFragment extends Fragment {
     RecyclerView recyclerView;
     DataAdapter adapter;
     TextView IncomeSum;
-
+    FirebaseUser mUser;
+    String uid;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_income, container, false);
         mAuth = FirebaseAuth.getInstance();
-        FirebaseUser mUser = mAuth.getCurrentUser();
-        String uid = mUser.getUid();
+        mUser = mAuth.getCurrentUser();
+        uid = mUser.getUid();
         recyclerView=view.findViewById(R.id.recycler_id_income);
         IncomeSum=view.findViewById(R.id.income_txt_result);
 
@@ -51,13 +52,13 @@ public class IncomeFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         FirebaseRecyclerOptions<Data> options =
                 new FirebaseRecyclerOptions.Builder<Data>()
-                        .setQuery(mIncomeDatabase, Data.class)
+                        .setQuery(mIncomeDatabase.child(uid), Data.class)
                         .build();
 
         adapter=new DataAdapter(options);
         recyclerView.setAdapter(adapter);
 
-        mIncomeDatabase.addValueEventListener(new ValueEventListener() {
+        mIncomeDatabase.child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 double totalvalue = 0;

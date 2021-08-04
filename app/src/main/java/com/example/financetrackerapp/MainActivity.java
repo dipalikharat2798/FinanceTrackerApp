@@ -79,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startFragment(expenseFragment);
                         return true;
 
+                    case R.id.analytics:
+                        startActivity(new Intent(MainActivity.this,AnalyticsActivity.class));
+                        return true;
+
                     default:
                         return true;
 

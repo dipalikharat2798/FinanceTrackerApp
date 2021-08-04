@@ -43,8 +43,8 @@ public class AnalyticsActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         uid = mAuth.getCurrentUser().getUid();
-        mexpenseDatabase = FirebaseDatabase.getInstance().getReference().child("ExpenseData").child(uid);
-        mexpenseDatabase1 = FirebaseDatabase.getInstance().getReference().child("ExpenseData");
+        mexpenseDatabase = FirebaseDatabase.getInstance().getReference().child("ExpenseData").child(uid).child(uid);
+        mexpenseDatabase1 = FirebaseDatabase.getInstance().getReference().child("ExpenseData").child(uid);
         //
         //anyChartView
         anyChartView = findViewById(R.id.anyChartView);
