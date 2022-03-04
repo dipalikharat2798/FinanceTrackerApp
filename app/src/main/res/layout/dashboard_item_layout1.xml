@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/type_txt_income2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/spartan_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="Type" />
+
+        <TextView
+            android:id="@+id/amount_txt_income2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/spartan_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="0.000" />
+
+        <TextView
+            android:id="@+id/date_txt_income2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/spartan_bold"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="28 July 2021"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

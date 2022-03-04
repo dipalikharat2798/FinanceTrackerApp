@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.my_toolbar);
         toolbar.setTitle("Finace Manger");
         setSupportActionBar(toolbar);
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,new DashBoardFragment()).commit();
+       // getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,new DashBoardFragment()).commit();
         bottomNavigationView = findViewById(R.id.bottomnavigationbar);
         frameLayout = findViewById(R.id.main_frame);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);

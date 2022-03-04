@@ -23,8 +23,10 @@ import android.widget.Toast;
 
 
 import com.example.financetrackerapp.Adapter.DashBoardAdapter;
+import com.example.financetrackerapp.Adapter.DashBoardAdapter1;
 import com.example.financetrackerapp.Adapter.DataAdapter;
 import com.example.financetrackerapp.Model.Data;
+import com.example.financetrackerapp.Model.Data1;
 import com.example.financetrackerapp.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -54,6 +56,7 @@ public class DashBoardFragment extends Fragment {
     private TextView totalIncome_tv, totalExpence_tv;
     private RecyclerView mIncomeRecycler, mExpenseRecycler;
     DashBoardAdapter adapter;
+    DashBoardAdapter1 adapter1;
     //firebase
 
     private FirebaseAuth mAuth;
@@ -61,7 +64,7 @@ public class DashBoardFragment extends Fragment {
     private DatabaseReference mExpenseDatabase;
     FirebaseUser mUser;
     String uid;
-
+    RecyclerView recyclerView;
     public DashBoardFragment() {
     }
 
@@ -86,7 +89,7 @@ public class DashBoardFragment extends Fragment {
         fab_expense_txt = myview.findViewById(R.id.expense_ft_text);
         totalIncome_tv = myview.findViewById(R.id.setIncome_tv);
         totalExpence_tv = myview.findViewById(R.id.setExpense_tv);
-        mIncomeRecycler = myview.findViewById(R.id.dashborad_income);
+        mIncomeRecycler = myview.findViewById(R.id.dashborad_Income);
         mExpenseRecycler = myview.findViewById(R.id.dashborad_Expense);
 
         fadeOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_open);
@@ -134,6 +137,20 @@ public class DashBoardFragment extends Fragment {
 
             }
         });
+
+        //RecyclerView
+
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.setReverseLayout(true);
+        mIncomeRecycler.setHasFixedSize(true);
+        mIncomeRecycler.setLayoutManager(linearLayoutManager);
+
+        LinearLayoutManager linearLayoutManager1=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        linearLayoutManager1.setReverseLayout(true);
+        linearLayoutManager1.setStackFromEnd(true);
+        mExpenseRecycler.setHasFixedSize(true);
+        mExpenseRecycler.setLayoutManager(linearLayoutManager1);
 
         return myview;
     }
@@ -291,43 +308,34 @@ public class DashBoardFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-
-        layoutManager.setReverseLayout(true);
-        layoutManager.setStackFromEnd(true);
-        mIncomeRecycler.setHasFixedSize(true);
-        mIncomeRecycler.setLayoutManager(layoutManager);
-        FirebaseRecyclerOptions<Data> options =
-                new FirebaseRecyclerOptions.Builder<Data>()
-                        .setQuery(mIncomeDatabase.child(uid), Data.class)
-                        .build();
-
-        adapter = new DashBoardAdapter(options);
-        mIncomeRecycler.setAdapter(adapter);
-        adapter.startListening();
     }
 
-    public void call() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-
-        layoutManager.setReverseLayout(true);
-        layoutManager.setStackFromEnd(true);
-        mIncomeRecycler.setHasFixedSize(true);
-        mIncomeRecycler.setLayoutManager(layoutManager);
-        FirebaseRecyclerOptions<Data> options =
-                new FirebaseRecyclerOptions.Builder<Data>()
-                        .setQuery(mIncomeDatabase.child(uid), Data.class)
-                        .build();
-
-        adapter = new DashBoardAdapter(options);
-        mIncomeRecycler.setAdapter(adapter);
-        adapter.startListening();
-    }
 
     @Override
     public void onStop() {
         super.onStop();
-        adapter.stopListening();
+    }
+
+    public static class IncomeViewHolder extends RecyclerView.ViewHolder{
+        View mIncomeView;
+        public IncomeViewHolder(@NonNull View itemView) {
+            super(itemView);
+            mIncomeView=itemView;
+        }
+
+        public void setmIncomeType(String type){
+            TextView mtype=mIncomeView.findViewById(R.id.type_txt_income1);
+            mtype.setText(type);
+        }
+        public void setmIncomeAmount(String type){
+            TextView mAmount=mIncomeView.findViewById(R.id.amount_txt_income1);
+            mAmount.setText(type);
+        }
+        public void setmIncomeDate(String type){
+            TextView mDate=mIncomeView.findViewById(R.id.date_txt_income1);
+            mDate.setText(type);
+        }
+
     }
 
 }
